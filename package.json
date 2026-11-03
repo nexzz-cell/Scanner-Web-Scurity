@@ -1,0 +1,6 @@
+{
+  "name": "security-finding-loopholes-netlify",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Security and Finding Loopholes Netlify site and function"
+}
