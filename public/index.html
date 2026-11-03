@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Security and Finding Loopholes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<header class="topbar">
+ <div class="brand"><div class="brand-icon"><svg viewBox="0 0 64 64"><path d="M32 5 53 14v17c0 14-9 23-21 29C20 54 11 45 11 31V14L32 5Z" fill="none" stroke="#ffe66d" stroke-width="4"/><path d="M20 27 32 15l12 12v13L32 50 20 40Z" fill="#17172a" stroke="#b8a1ff" stroke-width="2"/><path d="m24 31 6-2-3 4m7-4 6 2-3 2" stroke="#ff8fab" stroke-width="3" stroke-linecap="round"/><circle cx="48" cy="46" r="8" fill="none" stroke="#ffe66d" stroke-width="3"/><path d="m54 52 6 6" stroke="#ffe66d" stroke-width="4" stroke-linecap="round"/></svg></div><div><div class="eyebrow">AUTHORIZED SECURITY TOOLKIT</div><div class="brand-name">SECURITY <span>&</span> FINDING LOOPHOLES</div></div></div>
+ <div class="status"><i></i> NETLIFY EDITION</div>
+</header>
+<main>
+<section class="hero"><div class="hero-copy"><div class="kicker">DISCOVER EXPOSURE. REVIEW RISK. SECURE.</div><h1>Find the <em>weak points.</em><br>Strengthen your defense.</h1><p>Passive web security assessment for domains you own or are authorized to test. Map pages, inspect headers, inventory parameters, and review potential risks.</p><div class="chips"><span>01 / CRAWL</span><span>02 / ANALYZE</span><span>03 / REPORT</span></div></div><div class="hero-art"><div class="orb"></div><div class="shield-art">⌕</div><div class="scan-ring"></div><div class="art-label">NΞO / SECURITY LAB</div></div></section>
+<section class="workspace">
+ <div class="section-head"><div><div class="eyebrow">01 — TARGET CONFIGURATION</div><h2>Start a security scan</h2></div><div class="read-only">READ-ONLY MODE</div></div>
+ <div class="target-card"><label for="target">TARGET URL</label><div class="input-row"><span class="link-icon">↗</span><input id="target" type="url" placeholder="https://your-domain.com" autocomplete="url"><button id="scanBtn"><span>⌁</span> SCAN &amp; ANALYZE</button></div><div class="target-note">ⓘ Only scan systems you own or have explicit permission to assess. Public targets only; private IPs are blocked.</div></div>
+ <div class="module-grid">
+  <div class="module"><b>⌘</b><div><strong>Same-origin crawler</strong><small>Up to 12 pages · no off-site links</small></div><span class="module-num">01</span></div>
+  <div class="module"><b>⬡</b><div><strong>Security headers</strong><small>HSTS · CSP · Referrer · more</small></div><span class="module-num">02</span></div>
+  <div class="module"><b>⌗</b><div><strong>Parameter inventory</strong><small>Query keys and form fields</small></div><span class="module-num">03</span></div>
+  <div class="module"><b>◈</b><div><strong>Cookie review</strong><small>Secure and HttpOnly flags</small></div><span class="module-num">04</span></div>
+ </div>
+ <div class="results-head"><div><div class="eyebrow">02 — LIVE OUTPUT</div><h2>Scan intelligence</h2></div><div id="scanState" class="state">WAITING FOR TARGET</div></div>
+ <div class="dashboard">
+  <div class="console panel"><div class="panel-title"><span><i class="pulse"></i> LIVE CONSOLE</span><button class="text-btn" id="clearBtn">CLEAR</button></div><div id="consoleLog" class="console-body"><div class="log-line dim">[SYSTEM] Netlify security lab initialized.</div><div class="log-line dim">[READY] Enter an authorized target to begin.</div></div></div>
+  <div class="summary panel"><div class="panel-title">SCAN SUMMARY</div><div class="metrics"><div><strong id="mPages">—</strong><small>PAGES</small></div><div><strong id="mForms">—</strong><small>FORMS</small></div><div><strong id="mParams">—</strong><small>PARAMETERS</small></div></div><div class="summary-foot"><span>SCAN STATUS</span><b id="summaryStatus">NOT STARTED</b></div></div>
+ </div>
+ <div class="findings-wrap"><div class="panel-title"><span>03 — FINDINGS &amp; REVIEW</span><button id="exportBtn" class="export-btn" disabled>↓ EXPORT JSON</button></div><div id="findings" class="findings-empty">Your findings will appear here after the scan.</div></div>
+ <div class="data-grid">
+  <div class="panel data-panel"><div class="panel-title">CRAWLED URLS <span id="urlCount">0</span></div><div id="urls" class="data-list empty">No URLs collected.</div></div>
+  <div class="panel data-panel"><div class="panel-title">PARAMETERS <span id="paramCount">0</span></div><div id="params" class="data-list empty">No parameters collected.</div></div>
+  <div class="panel data-panel"><div class="panel-title">FORMS INVENTORY <span id="formCount">0</span></div><div id="forms" class="data-list empty">No forms collected.</div></div>
+  <div class="panel data-panel"><div class="panel-title">COOKIE FLAGS <span id="cookieCount">0</span></div><div id="cookies" class="data-list empty">No cookies observed.</div></div>
+ </div>
+</section>
+<section class="notice"><div class="notice-icon">!</div><div><strong>Important security boundary</strong><p>This tool performs bounded GET-only crawling and response inspection. It does not brute-force credentials, bypass authentication, submit forms, inject exploit payloads, or modify server data. IDOR-like parameter names are clues for manual verification, not proof of a vulnerability.</p></div></section>
+</main><footer><span>SECURITY &amp; FINDING LOOPHOLES</span><span>NETLIFY FUNCTIONS · AUTHORIZED TESTING · v1.0</span></footer>
+<script src="/app.js"></script>
+</body></html>
